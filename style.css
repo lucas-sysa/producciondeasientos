@@ -1,0 +1,136 @@
+/* --- Reset básico --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #048C7C;
+}
+
+form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #333;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border 0.2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #048C7C;
+  outline: none;
+  box-shadow: 0px 0px 4px rgba(4,140,124,0.4);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+button {
+  background: #048C7C;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background: #036f63;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+table th {
+  background: #048C7C;
+  color: #fff;
+}
+
+table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap; /* se puede quitar si querés que nunca se rompan de línea */
+  margin-bottom: 15px;
+}
+
+.action-buttons button {
+  background: #048C7C;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;   /* menos ancho */
+  font-size: 13px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: auto;          /* para que no ocupen todo el ancho */
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.action-buttons button:hover {
+  background: #036f63;
+}
+
+.action-buttons button:active {
+  transform: scale(0.97);
+}

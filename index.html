@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Producción</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- BOTONES DE ACCIÓN COMPACTOS -->
+    <div class="action-buttons">
+      <button id="btnLimpiar">Limpiar registros</button>
+      <button id="btnExportConfig">Exportar Configuración</button>
+      <input type="file" id="btnImportConfig" style="display:none">
+      <button onclick="document.getElementById('btnImportConfig').click()">Importar Configuración</button>
+      <button id="btnExportExcel">Exportar a Excel</button>
+    </div>
+
+    <h1>Registro de Producción</h1>
+
+    <!-- FORMULARIO -->
+    <form id="produccionForm">
+      <label>ORDEN:</label>
+      <input type="text" name="orden" required>
+
+      <label>MODELO:</label>
+      <select name="modelo" required>
+        <option value="">Seleccione</option>
+        <option value="MOTOMEL">MOTOMEL</option>
+        <option value="BENELLI">BENELLI</option>
+        <option value="SUZUKI">SUZUKI</option>
+        <option value="IKA">IKA</option>
+        <option value="TVS">TVS</option>
+      </select>
+
+      <label>DESCRIPCIÓN:</label>
+      <select name="descripcion" id="descripcion" required>
+        <option value="">Seleccione</option>
+      </select>
+
+      <label>CANTIDAD A PRODUCIR:</label>
+      <input type="number" name="cant_producir" required>
+
+      <label>CANTIDAD PRODUCIDA:</label>
+      <input type="number" name="cant_producida" required>
+
+      <label>CANTIDAD POR FALTANTE:</label>
+      <input type="number" name="cant_faltante">
+
+      <label>CANTIDAD POR ROTURA:</label>
+      <input type="number" name="cant_rotura">
+
+      <label>COMENTARIOS:</label>
+      <textarea name="comentarios"></textarea>
+
+      <button type="submit">Guardar</button>
+    </form>
+
+    <!-- TABLA DE REGISTROS -->
+    <h2>Registros cargados</h2>
+    <table id="tablaRegistros">
+      <thead>
+        <tr>
+          <th>ORDEN</th>
+          <th>MODELO</th>
+          <th>DESCRIPCIÓN</th>
+          <th>A PRODUCIR</th>
+          <th>PRODUCIDA</th>
+          <th>FALTANTE</th>
+          <th>ROTURA</th>
+          <th>COMENTARIOS</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
