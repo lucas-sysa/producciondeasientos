@@ -94,9 +94,6 @@
   <label>Comentarios: <input type="text" name="comentarios"></label>
   <button type="submit">Enviar Producción</button>
 </form>
-  <h3>Historial Producción:</h3>
-  <button class="btnLimpiar" onclick="limpiarHistorial('historialProduccionLS','historialProduccion')">Limpiar Historial Producción</button>
-  <div id="historialProduccion" class="historial"></div>
 
 <!-- Formulario Kit -->
 <form id="formKit">
@@ -179,9 +176,21 @@
 <label>Cantidad por Rotura: <input type="number" name="cantidadRoturaKit" required></label>
   <button type="submit">Enviar Kit</button>
 </form>
-  <h3>Historial Kit:</h3>
-  <button class="btnLimpiar" onclick="limpiarHistorial('historialKitLS','historialKit')">Limpiar Historial Kit</button>
-  <div id="historialKit" class="historial"></div>
+
+<div class="historiales-grid">
+  <div class="historial-container">
+    <h3>Historial Producción:</h3>
+    <button class="btnLimpiar" onclick="limpiarHistorial('historialProduccionLS','historialProduccion')">Limpiar Historial Producción</button>
+    <div id="historialProduccion" class="historial"></div>
+  </div>
+
+  <div class="historial-container">
+    <h3>Historial Kit:</h3>
+    <button class="btnLimpiar" onclick="limpiarHistorial('historialKitLS','historialKit')">Limpiar Historial Kit</button>
+    <div id="historialKit" class="historial"></div>
+  </div>
+</div>
+
   <script src="script.js"></script>
 </body>
 </html>
