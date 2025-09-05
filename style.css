@@ -1,161 +1,145 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
   margin: 0;
-  background: #eef2f7;
+  background: #f4f6f8;
+  color: #333;
 }
 
 h1 {
   text-align: center;
-  color: #333;
-  margin-top: 20px;
+  margin: 30px 0 20px 0;
+  font-size: 1.8em;
+  color: #1f2937;
 }
 
 .selector {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 15px;
+  margin-bottom: 30px;
 }
 
 .selector button {
   padding: 8px 16px;
-  font-size: 14px;
+  font-size: 0.9em;
   border-radius: 6px;
-  border: 1px solid #bbb;
-  background-color: #28a745;
+  border: 1px solid #ccc;
+  background-color: #3b82f6;
+  color: white;
   cursor: pointer;
-  transition: background 0.2s ease;
-  width: auto;
+  transition: 0.2s;
 }
 
 .selector button:hover {
-  background-color: #ddd;
+  background-color: #2563eb;
 }
 
-form {
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  margin: 0 auto 10px auto;
-  max-width: 500px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  display: none;
-}
-
-label {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-
-input[type="text"],
-input[type="date"],
-input[type="number"],
-select {
-  width: 55%;
-  padding: 8px 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-button {
-  width: 100%;
-  padding: 12px;
-  font-size: 1.1em;
-  background: #28a745;
-  color: white;
-  border: none;
-  border-radius: 12px;
-  margin-top: 20px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  background: #218838;
-}
-
-.btnLimpiar {
-  width: 150px; /* ancho fijo más pequeño */
-  background: #dc3545;
-  margin: 10px auto;
-  display: block; /* para que el margin:auto lo centre */
-  padding: 8px 0;
-  border-radius: 8px;
-  font-size: 0.9em;
-  text-align: center;
-}
-
-.btnLimpiar:hover {
-  background: #c82333;
-}
-
-@media (max-width: 480px) {
-  label {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  input, select {
-    width: 100%;
-  }
-}
-
-.historial {
-  background: #f9f9f9;
-  border: 1px solid #ccc;
-  max-width: 500px;
-  margin: 10px auto 25px auto;
-  padding: 10px;
-  border-radius: 8px;
-  max-height: 200px;
-  overflow-y: auto;
-  font-size: 0.9em;
-  display: block;
-}
-
-.historial div {
-  padding: 5px;
-  border-bottom: 1px solid #eee;
-}/* Contenedor de formularios */
 .forms-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 30px; /* más espacio entre formularios */
+  margin-bottom: 40px;
 }
 
-/* Contenedor de historiales en dos columnas */
+form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 700px;
+  width: 90%;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  display: none;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 200px;
+  font-size: 0.9em;
+}
+
+input, select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9em;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 0.95em;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button[type="submit"]:hover {
+  background: #059669;
+}
+
+.btnLimpiar {
+  padding: 6px 12px;
+  font-size: 0.8em;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 10px auto;
+}
+
+.btnLimpiar:hover {
+  background: #b91c1c;
+}
+
 .historiales-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto 40px auto;
-  padding: 0 10px;
+  display: flex;
+  gap: 30px; /* más separación entre historiales */
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.historial-container {
+  flex: 1 1 300px;
+  background: #fff;
+  padding: 20px; /* más padding interno */
+  border-radius: 12px;
+  box-shadow: 0 1px 12px rgba(0,0,0,0.05);
 }
 
 .historial-container h3 {
   text-align: center;
+  margin-bottom: 15px;
+  font-size: 1em;
+  color: #111827;
 }
 
 .historial {
-  max-height: 300px;
+  max-height: 220px; /* un poco más alto */
   overflow-y: auto;
   background: #f9fafb;
-  padding: 15px;
-  border-radius: 12px;
-  box-shadow: inset 0 2px 6px rgba(0,0,0,0.05);
-  margin-top: 10px;
+  padding: 12px;
+  border-radius: 10px;
 }
 
 .historial div {
+  padding: 6px 12px;
   margin-bottom: 6px;
-  padding: 8px 12px;
-  border-radius: 10px;
-  word-break: break-word;
+  border-radius: 8px;
   background: #e5e7eb;
-  animation: fadeInUp 0.4s ease forwards;
-  transition: background 0.3s;
+  font-size: 0.85em;
 }
 
 .historial div.produccion {
@@ -164,4 +148,10 @@ button:hover {
 
 .historial div.kit {
   background: #bbf7d0;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
 }
